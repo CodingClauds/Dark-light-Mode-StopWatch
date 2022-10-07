@@ -1,0 +1,99 @@
+@use "./styles/variables.scss" as *;
+@use "./styles/mixins.scss" as *;
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: $base-color;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+  background-color: rgb(220, 220, 214);
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  @include columnCenter;
+  margin: 0 auto;
+  color: $white;
+  text-align: center;
+  margin: 30px auto;
+  padding-bottom: 5rem;
+  width: 85%;
+
+  @include desktop {
+    width: 95%;
+  }
+}
+
+.stopwatch-container {
+  margin: 0 auto;
+  margin-top: 1rem;
+  background-color: $red;
+  border: 2px solid maroon;
+  width: 400px;
+  border-radius: 12px;
+
+  @include tablet {
+    width: 600px;
+  }
+
+  @include desktop {
+    width: 800px;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 2.6em;
+  text-transform: uppercase;
+}
+
+#seconds,
+#tens {
+  font-size: 2em;
+}
+
+button {
+  @include corners(5px);
+  background: $base-color;
+  color: $black;
+  border: 1px solid $white;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 18px 10px;
+  width: 180px;
+  margin: 10px;
+  outline: none;
+
+  &:hover {
+    @include transition;
+    background: $TrnsPrnt-black;
+    border: solid 1px $white;
+    color: $base-color;
+  }
+}
+
+.cp-container {
+  margin-bottom: 10rem;
+  &__copyright {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    color: $black;
+    border-top: 1px solid $black;
+    padding-top: 2rem;
+    margin: 0 2rem;
+  }
+}
