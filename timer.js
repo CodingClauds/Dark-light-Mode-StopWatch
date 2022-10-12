@@ -1,6 +1,5 @@
 window.onload = (event) => {
   console.log("page is fully loaded.");
-
   // Append to DOM section
   const timerSeconds = document.getElementById("seconds");
 
@@ -63,3 +62,14 @@ window.onload = (event) => {
 
   copyrightYear.innerText = today;
 };
+
+const btn = document.querySelector(".btn-toggle");
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+btn.addEventListener("change", function () {
+  if (prefersDarkScheme.matches) {
+    document.body.classList.toggle("dark-theme");
+  } else {
+    document.body.classList.toggle("light-theme");
+  }
+});
