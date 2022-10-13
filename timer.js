@@ -1,6 +1,4 @@
 window.onload = (event) => {
-  console.log("page is fully loaded.");
-
   // Append to DOM section
   const timerSeconds = document.getElementById("seconds");
 
@@ -57,9 +55,37 @@ window.onload = (event) => {
     timerSeconds.innerText = output;
   });
 
+  // light/dark mode toggle
+  const input = document.querySelector(".theme-switcher input");
+
+  input.addEventListener("change", (e) => {
+    if (e.target.checked) {
+      document.body.setAttribute("data-theme", "dark");
+      console.log(e.target.checked);
+    } else {
+      document.body.setAttribute("data-theme", "light");
+      console.log(e.target.checked);
+    }
+  });
+
   // Dynamic Date-Year, this will change once a year.
   const copyrightYear = document.getElementById("copyright-year");
   const today = new Date().getFullYear();
 
   copyrightYear.innerText = today;
+
+  console.log("page is fully loaded.");
 };
+
+// Attempt 2 - using prefers-color-scheme
+
+// const toggleSwitch = document.querySelector(".btn-toggle");
+// const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+// toggleSwitch.addEventListener("change", () => {
+//   if (prefersDarkScheme.matches) {
+//     document.body.classList.toggle("dark-theme");
+//   } else {
+//     document.body.classList.toggle("light-theme");
+//   }
+// });
