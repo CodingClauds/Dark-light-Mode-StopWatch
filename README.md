@@ -1,6 +1,5 @@
-# F1-Flipcard Game
+# Dark/light Mode - StopWatch
 
-Here's the Formula-1 themed flipcard game with all 20 drivers from the 2022 driver lineup, try to match the drivers with their teams before the time runs out! Let's see if you have what it takes to have a podium finish. 
+For this challenge, I wanted to implement a light and dark mode switch toggle that would change the colours or invert the colours from the default to dark mode.
 
-<img src="./assets/screengrab.png" style="width:80%;" />
-
+<img src="./images/dark-light-mode.png" style="width:80%;" />
