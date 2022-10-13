@@ -5,15 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="timer.css" />
-    <link rel="icon" type="image/x-icon" href="" />
 
     <title>Stopwatch</title>
   </head>
-  <body>
-    <label class="switch btn-toggle" for="dark-mode">
-      <input type="checkbox" id="dark-mode" />
-      <span class="slider round"></span>
-    </label>
+  <body data-theme="light">
+    <div class="theme-switcher">
+      <input type="checkbox" id="switcher" />
+      <label for="switcher">switch</label>
+    </div>
 
     <div class="wrapper">
       <div class="stopwatch-container">
@@ -25,10 +24,9 @@
         <button id="button-reset">Reset</button>
       </div>
     </div>
-
     <div class="cp-container">
-      <span class="cp-container__copyright"
-        >Claudio Miranda © &nbsp;<span id="copyright-year"></span
+      <span class="cp-container__copyright">
+        Claudio Miranda © &nbsp;<span id="copyright-year"></span
       ></span>
     </div>
     <script src="timer.js"></script>
